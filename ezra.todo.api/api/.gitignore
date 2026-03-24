@@ -1,0 +1,28 @@
+# Build output
+bin/
+obj/
+
+# SQLite database files
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific files
+*.user
+*.suo
+.vs/
+
+# Environment / secrets
+appsettings.Development.json
+*.pfx
+
+# Logs
+logs/
+*.log
+
+# NuGet
+*.nupkg
+.nuget/
+
+# OS
+.DS_Store
