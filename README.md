@@ -2,7 +2,7 @@
 
 A full-stack to-do task management application built with ASP.NET Core 10 and React.  Very narrow in scope but the intention is for it to be close to functoinal as an MVP.  Applications are decoupled to ensure independent deployment and scaling.
 
-<img width="1108" height="934" alt="image" src="https://github.com/user-attachments/assets/92645feb-717c-4bb2-9a19-eee4cd542302" />
+<img width="2848" height="1372" alt="image" src="https://github.com/user-attachments/assets/65304b3d-090c-4297-a49e-cb983f40b04f" />
 
 <img width="2966" height="1480" alt="image" src="https://github.com/user-attachments/assets/e8acf095-577e-42f1-ba4a-5401010b8962" />
 
