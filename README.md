@@ -2,6 +2,10 @@
 
 A full-stack to-do task management application built with ASP.NET Core 10 and React.  Very narrow in scope but the intention is for it to be close to functoinal as an MVP.  Applications are decoupled to ensure independent deployment and scaling.
 
+<img width="1108" height="934" alt="image" src="https://github.com/user-attachments/assets/92645feb-717c-4bb2-9a19-eee4cd542302" />
+
+<img width="2966" height="1480" alt="image" src="https://github.com/user-attachments/assets/e8acf095-577e-42f1-ba4a-5401010b8962" />
+
 ## Future Technical Considerations
 
 - **Real email provider** — Integrate SendGrid or AWS SES. Email confirmation is required before login; currently the service is stubbed and confirmation links are logged to the console.
