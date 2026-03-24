@@ -10,6 +10,7 @@ A full-stack to-do task management application built with ASP.NET Core 10 and Re
 - **Observability** — Application-level metrics, distributed tracing (OpenTelemetry), health dashboards, and alerting.
 - **Rate limiting** — Protect authentication and public endpoints from brute-force and abuse.
 - **Expanded test coverage** — Controller/integration tests to verify the full HTTP pipeline (middleware, auth, routing), and integration tests against a production-equivalent database engine.
+- **Infra / Deployment Process** — If a particular cloud provider is not a requirement, then I would go with GCP and Cloud Run containers for simplicity and future-thinking.  Alternatively, if cost savings was an immediate concern, I would go with a combination of maybe Vercel, Render, and NeonDb to get off the ground.
 - **CI/CD hardening** — Add automated test steps to the build pipeline so deployments are gated on passing tests.
 - **Vertical slice architecture** — As the domain grows, reorganize the API by feature rather than layer. This scales better when multiple developers are working in parallel.
 - **FluentValidation** — Replace manual validation with FluentValidation for complex or reusable validation rules.
