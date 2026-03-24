@@ -4,28 +4,26 @@ A full-stack to-do task management application built with ASP.NET Core 10 and Re
 
 ## Future Technical Considerations
 
-- Real email provider integration (SendGrid, AWS SES).
-  - Email confirmation is required before login. The email service is currently stubbed to console output — confirmation links are logged rather than sent. 
-- Deployment plan
-  - For this MVP, I would deploy both applications to GCP Cloud run for simplicity and speed. Basic steps of creating a cloud build yaml file, configuring Github connection in Cloud Build console and clicking build.  Easy peasy.
-- Structured Logging leveraging a library like Serilog.
-- Observability improvements / monitoring / alerting.
-- Rate limiting on authentication endpoints.
-  - Can't make it easy for the hackers
-- Possible vertical slice architecture as the app grows.  Organizing API by feature can be incredibly useful when working on a large project with others.
-- Possible fluent validation for more complex validation scenarios.
-- Event architecture for async style processing (notifications/emails).
-- Linter to catch things like unused variables
-- Additional test coverage: controller/integration tests to verify the HTTP pipeline, and integration tests against a production-equivalent database engine when we move off SQLite.
+- **Real email provider** — Integrate SendGrid or AWS SES. Email confirmation is required before login; currently the service is stubbed and confirmation links are logged to the console.
+- **Production database** — Migrate from SQLite to PostgreSQL or SQL Server for concurrency, scalability, and Cloud Run compatibility (SQLite doesn't work well with ephemeral containers).
+- **Structured logging** — Add Serilog (or similar) with structured log sinks for centralized log aggregation and searchability.
+- **Observability** — Application-level metrics, distributed tracing (OpenTelemetry), health dashboards, and alerting.
+- **Rate limiting** — Protect authentication and public endpoints from brute-force and abuse.
+- **Expanded test coverage** — Controller/integration tests to verify the full HTTP pipeline (middleware, auth, routing), and integration tests against a production-equivalent database engine.
+- **CI/CD hardening** — Cloud Build triggers are in place; add automated test steps to the build pipeline so deployments are gated on passing tests.
+- **Vertical slice architecture** — As the domain grows, reorganize the API by feature rather than layer. This scales better when multiple developers are working in parallel.
+- **FluentValidation** — Replace manual validation with FluentValidation for complex or reusable validation rules.
+- **Event-driven processing** — Introduce a message bus (e.g., Cloud Pub/Sub) for async workflows like email delivery and notifications.
+- **Frontend linting** — Add ESLint to catch unused variables, enforce consistent patterns, and integrate with CI.
 
 ## Future Product Considerations
-- Sharing feature.
-  - This will require planning for concurrency/contention since N users could be editing/viewing the same list.  Solved via optimistic concurrency (column on tables with contention).
-  - Likely requires real-time updates.  Leverage something like SignalR / websockets.
-- Add ability to reorder lists and todos
-  - New column on tables to store order 
-- Validate mobile functionality and styling
-- Eventual state will likely compete with products like trello/jira that have concepts of boards, lists, statuses, etc.
+
+- **List sharing & collaboration** — Allow users to share lists with view or edit access. This introduces concurrency concerns (optimistic concurrency via row versioning) and would benefit from real-time updates via SignalR or WebSockets.
+- **Drag-and-drop reordering** — Let users reorder both lists and todo items. Requires a sort-order column on each table.
+- **Mobile responsiveness** — Validate and refine the UI for small screens; consider a PWA wrapper for an app-like mobile experience.
+- **Rich task features** — Priority levels, labels/tags, recurring tasks, and subtasks.
+- **Search and filtering** — Full-text search across lists and items, with filters for due date, completion status, and labels.
+- **Board/Kanban view** — Offer an alternative view with columns representing statuses (To Do, In Progress, Done), moving toward a lightweight project management tool.
 
 ## Tech Stack
 
