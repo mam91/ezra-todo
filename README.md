@@ -10,7 +10,7 @@ A full-stack to-do task management application built with ASP.NET Core 10 and Re
 - **Observability** — Application-level metrics, distributed tracing (OpenTelemetry), health dashboards, and alerting.
 - **Rate limiting** — Protect authentication and public endpoints from brute-force and abuse.
 - **Expanded test coverage** — Controller/integration tests to verify the full HTTP pipeline (middleware, auth, routing), and integration tests against a production-equivalent database engine.
-- **CI/CD hardening** — Cloud Build triggers are in place; add automated test steps to the build pipeline so deployments are gated on passing tests.
+- **CI/CD hardening** — Add automated test steps to the build pipeline so deployments are gated on passing tests.
 - **Vertical slice architecture** — As the domain grows, reorganize the API by feature rather than layer. This scales better when multiple developers are working in parallel.
 - **FluentValidation** — Replace manual validation with FluentValidation for complex or reusable validation rules.
 - **Event-driven processing** — Introduce a message bus (e.g., Cloud Pub/Sub) for async workflows like email delivery and notifications.
