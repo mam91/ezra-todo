@@ -1,6 +1,6 @@
 # Ezra Todo App
 
-A full-stack to-do task management application built with ASP.NET Core 10 and React.  Very narrow in scope but the intention is for it to be close to functoinal as an MVP.  Applications are decoupled to ensure independent deployment and scaling.
+A full-stack to-do task management application built with ASP.NET Core 10 and React.  Very narrow in scope but the intention is for it to be close to functional as an MVP.  Applications are decoupled to ensure independent deployment and scaling.
 
 <img width="2848" height="1372" alt="image" src="https://github.com/user-attachments/assets/65304b3d-090c-4297-a49e-cb983f40b04f" />
 
