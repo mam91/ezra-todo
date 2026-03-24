@@ -96,6 +96,12 @@ The app will be available at `http://localhost:3000`. The dev server proxies `/a
 
 Email sending is stubbed for this MVP -- confirmation links are logged to the console rather than sent via email.
 
+<img width="2922" height="1412" alt="image" src="https://github.com/user-attachments/assets/5e3de92b-0e90-4e29-9ae9-5e6869fe2010" />
+
+<img width="2824" height="1330" alt="image" src="https://github.com/user-attachments/assets/7d16cfef-e354-4326-8a01-104c76e6f0a8" />
+
+<img width="1268" height="236" alt="image" src="https://github.com/user-attachments/assets/4c921011-a95f-4750-ad7c-69c34733362d" />
+
 ## Tests
 
 ### Backend (xUnit + In-Memory SQLite)
